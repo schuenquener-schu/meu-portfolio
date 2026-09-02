@@ -1691,6 +1691,104 @@ textarea.form-control {
   .projects-grid { grid-template-columns: 1fr; }
 }
 
+
+/* ================= WHATSAPP FLOATING BUTTON & CV BUTTON ================= */
+.btn-whatsapp {
+  background: #25d366;
+  color: #ffffff !important;
+  font-weight: 600;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+}
+
+.btn-whatsapp:hover {
+  background: #20ba5a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
+}
+
+.btn-cv {
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.15) 0%, rgba(245, 158, 11, 0.25) 100%);
+  color: #fbbf24;
+  border: 1px solid rgba(251, 191, 36, 0.4);
+}
+
+.btn-cv:hover {
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.25) 0%, rgba(245, 158, 11, 0.4) 100%);
+  border-color: #fbbf24;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(251, 191, 36, 0.3);
+}
+
+/* Floating WhatsApp Badge */
+.whatsapp-float-btn {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #25d366;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.5), 0 0 20px rgba(37, 211, 102, 0.3);
+  z-index: 2500;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+  text-decoration: none;
+}
+
+.whatsapp-float-btn:hover {
+  transform: scale(1.1) translateY(-4px);
+  box-shadow: 0 15px 35px rgba(37, 211, 102, 0.7), 0 0 30px rgba(37, 211, 102, 0.5);
+  color: #ffffff;
+}
+
+.whatsapp-float-btn svg {
+  width: 32px;
+  height: 32px;
+  fill: currentColor;
+}
+
+.whatsapp-pulse-ring {
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid #25d366;
+  animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+  pointer-events: none;
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.3); opacity: 0; }
+  100% { transform: scale(1.3); opacity: 0; }
+}
+
+.whatsapp-tooltip {
+  position: absolute;
+  right: 72px;
+  background: #0f172a;
+  color: #f8fafc;
+  padding: 8px 14px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(37, 211, 102, 0.4);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.whatsapp-float-btn:hover .whatsapp-tooltip {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 </style>
 </head>
 <body>
@@ -1753,13 +1851,16 @@ textarea.form-control {
           </p>
 
           <div class="hero-buttons">
-            <a href="#projects" class="btn btn-primary">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-              Explorar Projetos Reais
+            <a href="https://wa.me/5565993455168?text=Ol%C3%A1%20Vitor!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20uma%20oportunidade." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.97.53 1.961.815 2.796.815 3.183 0 5.769-2.586 5.77-5.766.001-3.182-2.585-5.768-5.77-5.768zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.392-10.416c-4.408 0-7.994 3.585-7.995 7.993 0 1.408.367 2.784 1.066 3.996l-1.132 4.137 4.241-1.113c1.161.633 2.474.969 3.82.97h.003c4.408 0 7.995-3.586 7.996-7.995 0-2.136-.831-4.144-2.344-5.656s-3.52-2.342-5.655-2.342zm0-2c5.514 0 9.996 4.482 9.996 9.995 0 2.669-1.039 5.178-2.927 7.067s-4.398 2.928-7.069 2.928c-1.708 0-3.376-.437-4.85-1.267l-5.181 1.359 1.385-5.06c-.908-1.528-1.387-3.279-1.387-5.027 0-5.513 4.482-9.995 9.995-9.995z"/></svg>
+              Falar no WhatsApp
             </a>
-            <a href="#about" class="btn btn-secondary">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
-              Conhecer Meu Perfil
+            <a href="assets/curriculo_vitor_schuenquener.pdf" download="Curriculo_Vitor_Schuenquener.pdf" class="btn btn-cv">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="18" x2="12" y2="12"></line><line x1="9" y1="15" x2="12" y2="18"></line><line x1="15" y1="15" x2="12" y2="18"></line></svg>
+              Baixar Currículo (PDF)
+            </a>
+            <a href="#projects" class="btn btn-secondary">
+              Explorar Projetos
             </a>
           </div>
 
@@ -1860,10 +1961,14 @@ textarea.form-control {
             <span class="info-chip">📍 Brasil</span>
           </div>
 
-          <div class="profile-actions">
-            <a href="#contact" class="btn btn-primary btn-sm" style="width: 100%;">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-              Fale Comigo
+          <div class="profile-actions" style="flex-direction: column; gap: 8px;">
+            <a href="https://wa.me/5565993455168?text=Ol%C3%A1%20Vitor!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20uma%20oportunidade." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm" style="width: 100%;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.97.53 1.961.815 2.796.815 3.183 0 5.769-2.586 5.77-5.766.001-3.182-2.585-5.768-5.77-5.768zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.392-10.416c-4.408 0-7.994 3.585-7.995 7.993 0 1.408.367 2.784 1.066 3.996l-1.132 4.137 4.241-1.113c1.161.633 2.474.969 3.82.97h.003c4.408 0 7.995-3.586 7.996-7.995 0-2.136-.831-4.144-2.344-5.656s-3.52-2.342-5.655-2.342zm0-2c5.514 0 9.996 4.482 9.996 9.995 0 2.669-1.039 5.178-2.927 7.067s-4.398 2.928-7.069 2.928c-1.708 0-3.376-.437-4.85-1.267l-5.181 1.359 1.385-5.06c-.908-1.528-1.387-3.279-1.387-5.027 0-5.513 4.482-9.995 9.995-9.995z"/></svg>
+              WhatsApp: (65) 99345-5168
+            </a>
+            <a href="assets/curriculo_vitor_schuenquener.pdf" download="Curriculo_Vitor_Schuenquener.pdf" class="btn btn-cv btn-sm" style="width: 100%;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="18" x2="12" y2="12"></line><line x1="9" y1="15" x2="12" y2="18"></line><line x1="15" y1="15" x2="12" y2="18"></line></svg>
+              Baixar Currículo (PDF)
             </a>
           </div>
         </div>
@@ -2169,13 +2274,23 @@ Digite 'vitor help' para listar os comandos ou clique nos atalhos abaixo.
             <p>Estou à disposição para responder dúvidas, colaborar em novos projetos e apresentar demonstrações ao vivo dos sistemas.</p>
 
             <div class="contact-channels">
+              <a href="https://wa.me/5565993455168?text=Ol%C3%A1%20Vitor!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20uma%20oportunidade." target="_blank" rel="noopener noreferrer" class="channel-item" style="border-color: rgba(37, 211, 102, 0.4); text-decoration: none;">
+                <div class="channel-icon" style="background: rgba(37, 211, 102, 0.15); color: #25d366;">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.97.53 1.961.815 2.796.815 3.183 0 5.769-2.586 5.77-5.766.001-3.182-2.585-5.768-5.77-5.768zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.392-10.416c-4.408 0-7.994 3.585-7.995 7.993 0 1.408.367 2.784 1.066 3.996l-1.132 4.137 4.241-1.113c1.161.633 2.474.969 3.82.97h.003c4.408 0 7.995-3.586 7.996-7.995 0-2.136-.831-4.144-2.344-5.656s-3.52-2.342-5.655-2.342zm0-2c5.514 0 9.996 4.482 9.996 9.995 0 2.669-1.039 5.178-2.927 7.067s-4.398 2.928-7.069 2.928c-1.708 0-3.376-.437-4.85-1.267l-5.181 1.359 1.385-5.06c-.908-1.528-1.387-3.279-1.387-5.027 0-5.513 4.482-9.995 9.995-9.995z"/></svg>
+                </div>
+                <div class="channel-details">
+                  <h4>WhatsApp Direto</h4>
+                  <span style="color: #34d399; font-weight: 600;">(65) 99345-5168 &bull; Clique para conversar</span>
+                </div>
+              </a>
+
               <div class="channel-item">
                 <div class="channel-icon">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                 </div>
                 <div class="channel-details">
-                  <h4>E-mail</h4>
-                  <span>vitor.contato@exemplo.com</span>
+                  <h4>Localização & Atuação</h4>
+                  <span>Rondonópolis - MT (Presencial e Remoto Brasil)</span>
                 </div>
               </div>
 
@@ -2530,7 +2645,7 @@ const terminalCommands = {
   "skills": "🛠️ Tech Stack Principal:\n  • Automação & RPA: Python (Pandas, OpenPyXL, Requests, Google APIs)\n  • Sistemas Web   : Google Apps Script, Clasp, JavaScript, Three.js 3D, HTML5/CSS3\n  • Documentos     : Extração de PDFs, Geração de DOCX (python-docx), RegEx\n  • Banco de Dados : PostgreSQL, SQL Avançado, Modelagem Relacional\n  • Ferramentas    : Git, VS Code, Google Cloud APIs, OAuth2",
   "projects": "🚀 Projetos Reais:\n  1. [GEAC] Gestão Documental 3D com Robô Assistente Integrado\n  2. [FROTAS] Sistema de Gestão de Frotas, Controle de Saídas e Banco de Horas\n  3. [FIPLAN] Automação em Python de Relatórios e Envio ao Google Drive\n  4. [ORDENS] Gerador de Ordens de Fornecimento (PDF -> DOCX)\n  5. [SQL] Modelagem e Análise E-Commerce em PostgreSQL\n  6. [TAREFAS] Gerenciador Web de Demandas e Produtividade",
   "stats": "📊 Indicadores Operacionais:\n  • 6+ sistemas e robôs desenvolvidos para fluxos corporativos\n  • Rastreabilidade total de saídas de veículos e controle de horas\n  • Automação de downloads e envios em nuvem\n  • Geração de contratos sem retrabalho manual",
-  "contact": "📫 Contato Profissional:\n  • Vitor Schuenquener\n  • Email    : vitor.contato@exemplo.com (Personalizável)\n  • Status   : Disponível para novos projetos e desenvolvimento de soluções!"
+  "contact": "📫 Contato Profissional de Vitor Schuenquener:\n  • WhatsApp : (65) 99345-5168\n  • Local    : Rondonópolis - MT (Disponível Remoto e Presencial)\n  • Status   : Aberto para novos projetos, contratações e automações corporativas!"
 };
 
 
@@ -2960,5 +3075,13 @@ function initContactForm() {
 }
 
 </script>
+
+  <!-- Floating WhatsApp Action Button -->
+  <a href="https://wa.me/5565993455168?text=Ol%C3%A1%20Vitor!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20uma%20oportunidade." target="_blank" rel="noopener noreferrer" class="whatsapp-float-btn" aria-label="Fale comigo no WhatsApp">
+    <div class="whatsapp-pulse-ring"></div>
+    <span class="whatsapp-tooltip">💬 Falar com Vitor no WhatsApp</span>
+    <svg viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.97.53 1.961.815 2.796.815 3.183 0 5.769-2.586 5.77-5.766.001-3.182-2.585-5.768-5.77-5.768zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.392-10.416c-4.408 0-7.994 3.585-7.995 7.993 0 1.408.367 2.784 1.066 3.996l-1.132 4.137 4.241-1.113c1.161.633 2.474.969 3.82.97h.003c4.408 0 7.995-3.586 7.996-7.995 0-2.136-.831-4.144-2.344-5.656s-3.52-2.342-5.655-2.342zm0-2c5.514 0 9.996 4.482 9.996 9.995 0 2.669-1.039 5.178-2.927 7.067s-4.398 2.928-7.069 2.928c-1.708 0-3.376-.437-4.85-1.267l-5.181 1.359 1.385-5.06c-.908-1.528-1.387-3.279-1.387-5.027 0-5.513 4.482-9.995 9.995-9.995z"/></svg>
+  </a>
+
 </body>
 </html>
