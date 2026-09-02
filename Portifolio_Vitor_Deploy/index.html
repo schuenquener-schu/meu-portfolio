@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vitor Schuenquener | Desenvolvedor, Automação & Sistemas Web</title>
+  <meta name="description" content="Portfólio profissional de Vitor Schuenquener: Especialista em Automações RPA com Python, Sistemas Web Corporativos em Google Apps Script e Engenharia de Dados com SQL/PostgreSQL.">
+  <meta name="keywords" content="Vitor Schuenquener, Desenvolvedor, Python, Google Apps Script, SQL, PostgreSQL, Automação, RPA, Three.js, Clasp, Portfólio">
+  <meta name="author" content="Vitor Schuenquener">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Vitor Schuenquener | Portfólio de Automação, Sistemas & Dados">
+  <meta property="og:description" content="Explore projetos corporativos reais: GEAC 3D, Sistema de Frotas, Automações FIPLAN e Modelagem SQL.">
+  
+  <!-- Google Fonts: Outfit & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <script type="module" src="https://unpkg.com/@splinetool/viewer/build/spline-viewer.js"></script>
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Ambient Glow Background Effects -->
+  <div class="bg-glow-orb orb-1"></div>
+  <div class="bg-glow-orb orb-2"></div>
+  <div class="bg-glow-orb orb-3"></div>
+  <div class="bg-grid-pattern"></div>
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <img src="assets/vitor_schuenquener.jpeg" alt="Vitor Schuenquener" class="nav-avatar">
+        <span>Vitor Schuenquener</span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#hero" class="nav-link active">Início</a></li>
+        <li><a href="#about" class="nav-link">Sobre Mim</a></li>
+        <li><a href="#skills" class="nav-link">Habilidades</a></li>
+        <li><a href="#projects" class="nav-link">Projetos</a></li>
+        <li><a href="#terminal" class="nav-link">Console CLI</a></li>
+        <li><a href="#contact" class="nav-link">Contato</a></li>
+      </ul>
+
+      <div class="nav-cta">
+        <a href="#projects" class="btn btn-primary btn-sm">Ver Projetos</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ================= HERO SECTION ================= -->
+  <header class="hero" id="hero">
+    <!-- Spline 3D Interactive Background Scene -->
+    <div class="hero-spline-bg" id="hero-spline-bg">
+      <spline-viewer url="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"></spline-viewer>
+    </div>
+    <div class="hero-spline-overlay"></div>
+
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-status">
+            <span class="status-dot"></span>
+            Disponível para Projetos & Soluções
+          </div>
+
+          <div class="hero-greeting">
+            <span>👋 Olá, seja bem-vindo! Eu sou Vitor Schuenquener</span>
+          </div>
+          
+          <h1 class="hero-title">
+            Criando Soluções em <span class="gradient-text">Automação</span>, Sistemas Web & <span class="gradient-text-alt">Dados</span>
+          </h1>
+          
+          <p class="hero-subtitle">
+            Transformando rotinas manuais e demandas operacionais complexas em plataformas web modernas, automações em Python, sistemas em Google Apps Script e arquiteturas relacionais de alto desempenho.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              Explorar Projetos Reais
+            </a>
+            <a href="#about" class="btn btn-secondary">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+              Conhecer Meu Perfil
+            </a>
+          </div>
+
+          <div class="hero-stack-preview">
+            <span class="stack-label">Especialidades:</span>
+            <div class="stack-badges">
+              <span class="stack-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                Python & RPA
+              </span>
+              <span class="stack-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
+                Google Apps Script
+              </span>
+              <span class="stack-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                PostgreSQL & SQL
+              </span>
+              <span class="stack-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                Web Apps & 3D
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card-preview">
+          <div class="glass-panel hero-glass-card">
+            <div class="hero-card-header">
+              <span class="card-tag">// vitor_schuenquener.json</span>
+              <span class="card-live-badge">
+                <span class="status-dot"></span> Sistemas em Produção
+              </span>
+            </div>
+
+            <div class="hero-metrics-list">
+              <div class="hero-metric-item">
+                <div class="metric-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                </div>
+                <div class="metric-info">
+                  <h4>GEAC - Gestão 3D & Chatbot</h4>
+                  <p>Interface imersiva 3D com robô assistente integrado</p>
+                </div>
+              </div>
+
+              <div class="hero-metric-item">
+                <div class="metric-icon-box purple">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                </div>
+                <div class="metric-info">
+                  <h4>Sistema de Gestão de Frotas</h4>
+                  <p>Controle de saídas, motoristas e banco de horas</p>
+                </div>
+              </div>
+
+              <div class="hero-metric-item">
+                <div class="metric-icon-box emerald">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+                </div>
+                <div class="metric-info">
+                  <h4>Pipelines ETL em Python</h4>
+                  <p>Automação FIPLAN & extração de PDFs em segundos</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= ABOUT SECTION & PROFILE ================= -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Sobre Mim</span>
+        <h2 class="section-title">Quem é <span class="gradient-text">Vitor Schuenquener</span>?</h2>
+        <p class="section-subtitle">
+          Compromisso profissional, mentalidade analítica e foco em construir ferramentas que geram impacto real.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <!-- Profile Card with Photo -->
+        <div class="glass-panel profile-card">
+          <div class="profile-photo-container">
+            <div class="profile-photo-backdrop"></div>
+            <img src="assets/vitor_schuenquener.jpeg" alt="Foto Profissional de Vitor Schuenquener" class="profile-photo-img">
+          </div>
+
+          <h3 class="profile-name">Vitor Schuenquener</h3>
+          <p class="profile-role">Automação & Sistemas Web</p>
+
+          <div class="profile-info-chips">
+            <span class="info-chip">🎂 31 anos</span>
+            <span class="info-chip">💍 Casado</span>
+            <span class="info-chip">📍 Brasil</span>
+          </div>
+
+          <div class="profile-actions">
+            <a href="#contact" class="btn btn-primary btn-sm" style="width: 100%;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              Fale Comigo
+            </a>
+          </div>
+        </div>
+
+        <!-- Bio Details & Pillars -->
+        <div class="glass-panel about-text-card">
+          <div>
+            <p class="about-intro">
+              Olá! Me chamo <strong>Vitor Schuenquener</strong>, tenho <strong>31 anos</strong>, sou <strong>casado</strong> e atuo no desenvolvimento de soluções tecnológicas que conectam necessidades operacionais reais a sistemas inteligentes, funcionais e de fácil utilização.
+            </p>
+            <p class="about-details">
+              Minha experiência abrange o ciclo completo de resolução de problemas: desde a identificação de gargalos e automação de rotinas em <strong>Python</strong> (RPA, ETL, integração com Google APIs e geração de minutas em Word/PDF) até a concepção de <strong>aplicações corporativas em Google Apps Script</strong> (com Clasp, UI modular, 3D interativo e robôs assistentes) e modelagem de bancos de dados relacionais em <strong>PostgreSQL</strong>.
+            </p>
+          </div>
+
+          <div class="about-pillars-grid">
+            <div class="pillar-card">
+              <div class="pillar-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              </div>
+              <h4>Automação & RPA</h4>
+              <p>Robôs em Python para raspagem, tratamento de planilhas e integração com Google Cloud APIs.</p>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+              </div>
+              <h4>Sistemas & Web Apps</h4>
+              <p>Aplicações em Google Apps Script (HTML/CSS/JS modular), Clasp, 3D e Chatbots.</p>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+              </div>
+              <h4>Modelagem SQL & Dados</h4>
+              <p>Modelagem relacional (3FN), consultas avançadas e relatórios analíticos em PostgreSQL.</p>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+              </div>
+              <h4>Engenharia de Documentos</h4>
+              <p>Extração automática de metadados de PDFs e geração dinâmica de minutas oficiais em DOCX.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SKILLS SECTION ================= -->
+  <section class="skills" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Tecnologias</span>
+        <h2 class="section-title">Habilidades & <span class="gradient-text">Tech Stack</span></h2>
+        <p class="section-subtitle">Conjunto de ferramentas e linguagens utilizadas na criação de soluções robustas.</p>
+      </div>
+
+      <div class="skills-grid">
+        <div class="glass-panel skill-category-card">
+          <div class="skill-card-header">
+            <div class="skill-cat-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+            </div>
+            <div>
+              <h3>Python & RPA</h3>
+            </div>
+          </div>
+          <p class="skill-card-desc">Automação de fluxos, raspagem de dados, integração de APIs e manipulação de arquivos.</p>
+          <div class="skill-items-list">
+            <div class="skill-chip-tag">
+              <span>Python 3.x</span>
+              <span class="badge-level">Automações</span>
+            </div>
+            <div class="skill-chip-tag">
+              <span>Pandas & OpenPyXL</span>
+              <span class="badge-level">ETL / Excel</span>
+            </div>
+            <div class="skill-chip-tag">
+              <span>Google Drive API</span>
+              <span class="badge-level">OAuth2</span>
+            </div>
+            <div class="skill-chip-tag">
+              <span>python-docx & PDF</span>
+              <span class="badge-level">Minutas DOCX</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-panel skill-category-card">
+          <div class="skill-card-header">
+            <div class="skill-cat-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            </div>
+            <div>
+              <h3>Sistemas & Web Apps</h3>
+            </div>
+          </div>
+          <p class="skill-card-desc">Aplicações corporativas modernas, dashboards interativos e módulos em nuvem.</p>
+          <div class="skill-items-list">
+            <div class="skill-chip-tag">
+              <span>Google Apps Script</span>
+              <span class="badge-level">Full Stack</span>
+            </div>
+            <div class="skill-chip-tag">
+              <span>JavaScript ES6+</span>
+              <span class="badge-level">Modular</span>
+            </div>
+            <div class="skill-chip-tag">
+              <span>Clasp (Google Clasp)</span>
+              <span class="badge-level">Versionamento</span>
+            </div>
+            <div class="skill-chip-tag">
+              <span>Three.js 3D & Chatbot</span>
+              <span class="badge-level">Interativo</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-panel skill-category-card">
+          <div class="skill-card-header">
+            <div class="skill-cat-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+            </div>
+            <div>
+              <h3>SQL & Dados</h3>
+            </div>
+          </div>
+          <p class="skill-card-desc">Modelagem relacional, otimização de consultas e relatórios analíticos de negócio.</p>
+          <div class="skill-items-list">
+            <div class="skill-chip-tag">
+              <span>PostgreSQL</span>
+              <span class="badge-level">Relacional</span>
+            </div>
+            <div class="skill-chip-tag">
+              <span>CTEs & Window Functions</span>
+              <span class="badge-level">Analítico</span>
+            </div>
+            <div class="skill-chip-tag">
+              <span>Modelagem DER (3FN)</span>
+              <span class="badge-level">Estrutura</span>
+            </div>
+            <div class="skill-chip-tag">
+              <span>Otimização & Índices</span>
+              <span class="badge-level">Performance</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-panel skill-category-card">
+          <div class="skill-card-header">
+            <div class="skill-cat-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+            </div>
+            <div>
+              <h3>Engenharia & Práticas</h3>
+            </div>
+          </div>
+          <p class="skill-card-desc">Padrões de projeto, versionamento, segurança de credenciais e documentação técnica.</p>
+          <div class="skill-items-list">
+            <div class="skill-chip-tag">
+              <span>Git & GitHub</span>
+              <span class="badge-level">Versionamento</span>
+            </div>
+            <div class="skill-chip-tag">
+              <span>REST APIs & JSON</span>
+              <span class="badge-level">Integração</span>
+            </div>
+            <div class="skill-chip-tag">
+              <span>Segurança & .env</span>
+              <span class="badge-level">Credenciais</span>
+            </div>
+            <div class="skill-chip-tag">
+              <span>Arquitetura Modular</span>
+              <span class="badge-level">Boas Práticas</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROJECTS SECTION ================= -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Portfólio de Projetos</span>
+        <h2 class="section-title">Sistemas & <span class="gradient-text">Projetos em Destaque</span></h2>
+        <p class="section-subtitle">Soluções reais desenvolvidas para otimizar processos, gerir dados e automatizar rotinas (com fotos e telas reais).</p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="projects-filter-bar">
+        <button class="filter-btn active" data-filter="all">Todos os Projetos</button>
+        <button class="filter-btn" data-filter="apps-script">Sistemas & Apps Script</button>
+        <button class="filter-btn" data-filter="automacao">Automação & Python</button>
+        <button class="filter-btn" data-filter="documentos">Processamento de Documentos</button>
+        <button class="filter-btn" data-filter="sql">SQL & Dados</button>
+      </div>
+
+      <!-- Dynamic Projects Container -->
+      <div class="projects-grid" id="projects-grid">
+        <!-- Rendered via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TERMINAL CLI SECTION ================= -->
+  <section class="terminal-section" id="terminal">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Console Interativo</span>
+        <h2 class="section-title">Vitor <span class="gradient-text-alt">CLI Console</span></h2>
+        <p class="section-subtitle">Experimente interagir diretamente com meu terminal virtual para consultar informações rápidas.</p>
+      </div>
+
+      <div class="terminal-wrapper">
+        <div class="terminal-window">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="terminal-dot dot-red"></span>
+              <span class="terminal-dot dot-yellow"></span>
+              <span class="terminal-dot dot-green"></span>
+            </div>
+            <span class="terminal-title">vitor@developer-box: ~ (zsh)</span>
+            <span style="font-size: 0.75rem; color: #64748b;">v2.4.0</span>
+          </div>
+
+          <div class="terminal-body" id="terminal-body">
+            <div class="terminal-output" id="terminal-output">
+Bem-vindo ao Vitor CLI v2.4.0 (Ambiente Interativo de Portfólio)
+Digite 'vitor help' para listar os comandos ou clique nos atalhos abaixo.
+            </div>
+
+            <div class="terminal-prompt-row">
+              <span class="terminal-prompt-symbol">vitor@portfolio:~$</span>
+              <input type="text" id="terminal-input" class="terminal-input" placeholder="digite um comando (ex: vitor help)..." autocomplete="off" spellcheck="false">
+            </div>
+          </div>
+        </div>
+
+        <div class="terminal-hints-bar">
+          <span class="hint-label">Atalhos rápidos:</span>
+          <button class="cmd-pill" data-cmd="vitor help">vitor help</button>
+          <button class="cmd-pill" data-cmd="vitor bio">vitor bio</button>
+          <button class="cmd-pill" data-cmd="vitor skills">vitor skills</button>
+          <button class="cmd-pill" data-cmd="vitor projects">vitor projects</button>
+          <button class="cmd-pill" data-cmd="vitor stats">vitor stats</button>
+          <button class="cmd-pill" data-cmd="vitor clear">vitor clear</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= IMPACT STATS SECTION ================= -->
+  <section class="stats" id="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="glass-panel stat-box">
+          <div class="stat-number" data-target="85">+85%</div>
+          <div class="stat-label">Agilidade Operacional</div>
+          <div class="stat-desc">Redução no tempo de busca e processamento</div>
+        </div>
+
+        <div class="glass-panel stat-box">
+          <div class="stat-number" data-target="6">6+</div>
+          <div class="stat-label">Sistemas & Pipelines</div>
+          <div class="stat-desc">Aplicações e robôs em produção</div>
+        </div>
+
+        <div class="glass-panel stat-box">
+          <div class="stat-number" data-target="100">100%</div>
+          <div class="stat-label">Conformidade e Rastreio</div>
+          <div class="stat-desc">Eliminação de erros manuais em contratos</div>
+        </div>
+
+        <div class="glass-panel stat-box">
+          <div class="stat-number" data-target="3">3s</div>
+          <div class="stat-label">Geração de Minutas</div>
+          <div class="stat-desc">Extração e preenchimento ultrarrápido</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT SECTION ================= -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Contato</span>
+        <h2 class="section-title">Vamos Construir <span class="gradient-text">Algo Incrível Juntos?</span></h2>
+        <p class="section-subtitle">Fale comigo para discutir novas soluções, desenvolvimento de sistemas ou automações sob medida.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="glass-panel contact-info-panel">
+          <div>
+            <h3>Canais de Conexão</h3>
+            <p>Estou à disposição para responder dúvidas, colaborar em novos projetos e apresentar demonstrações ao vivo dos sistemas.</p>
+
+            <div class="contact-channels">
+              <div class="channel-item">
+                <div class="channel-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </div>
+                <div class="channel-details">
+                  <h4>E-mail</h4>
+                  <span>vitor.contato@exemplo.com</span>
+                </div>
+              </div>
+
+              <div class="channel-item">
+                <div class="channel-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                </div>
+                <div class="channel-details">
+                  <h4>LinkedIn</h4>
+                  <span>Conecte-se comigo no LinkedIn</span>
+                </div>
+              </div>
+
+              <div class="channel-item">
+                <div class="channel-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </div>
+                <div class="channel-details">
+                  <h4>GitHub</h4>
+                  <span>Repositórios e códigos abertos</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-panel contact-form-panel">
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="name">Seu Nome / Organização</label>
+              <input type="text" id="name" class="form-control" placeholder="Como posso te chamar?" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Seu E-mail Profissional</label>
+              <input type="email" id="email" class="form-control" placeholder="exemplo@dominio.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Assunto / Tipo de Demanda</label>
+              <input type="text" id="subject" class="form-control" placeholder="Automação, Sistema Web, Consultoria..." required>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Mensagem</label>
+              <textarea id="message" class="form-control" placeholder="Conte brevemente sobre o seu projeto ou necessidade..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              Enviar Mensagem
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROJECT DETAILS MODAL ================= -->
+  <div class="modal-overlay" id="project-modal" aria-hidden="true" role="dialog">
+    <div class="modal-container">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Fechar Modal">&times;</button>
+      
+      <div class="modal-header">
+        <span class="modal-badge" id="modal-badge">Categoria</span>
+        <h2 class="modal-title" id="modal-title">Título do Projeto</h2>
+      </div>
+
+      <!-- Showcase de Fotos Reais do Sistema -->
+      <div class="modal-gallery-showcase" id="modal-gallery-wrapper">
+        <div class="gallery-main-view" id="gallery-main-box" title="Clique para ampliar em tela cheia">
+          <img id="gallery-main-img" src="" alt="Tela do Sistema">
+        </div>
+        <div class="gallery-caption-bar">
+          <div>
+            <div class="gallery-caption-title" id="gallery-img-title">Título da Imagem</div>
+            <div class="gallery-caption-desc" id="gallery-img-desc">Descrição da funcionalidade exibida</div>
+          </div>
+          <div class="gallery-zoom-hint">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            Clique para Ampliar
+          </div>
+        </div>
+        <div class="gallery-thumbs-strip" id="gallery-thumbs-strip">
+          <!-- Miniaturas dinâmicas -->
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <div>
+          <h4 class="modal-section-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+            Visão Geral & Problema Resolvido
+          </h4>
+          <p id="modal-full-desc" style="line-height: 1.7; color: var(--text-secondary);"></p>
+        </div>
+
+        <div>
+          <h4 class="modal-section-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            Principais Recursos e Capacidades
+          </h4>
+          <ul class="modal-feature-list" id="modal-features"></ul>
+        </div>
+
+        <div>
+          <h4 class="modal-section-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
+            Arquitetura Técnica
+          </h4>
+          <p id="modal-architecture" style="line-height: 1.6; color: var(--text-muted); font-size: 0.92rem;"></p>
+        </div>
+
+        <div>
+          <h4 class="modal-section-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+            Métricas & Indicadores
+          </h4>
+          <div class="modal-stats-grid" id="modal-stats"></div>
+        </div>
+
+        <div>
+          <h4 class="modal-section-title">Tecnologias Utilizadas</h4>
+          <div class="project-tags" id="modal-tags"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lightbox Fullscreen Modal -->
+  <div class="lightbox-modal" id="lightbox-modal">
+    <div class="lightbox-content">
+      <button class="lightbox-close-btn" id="lightbox-close-btn" aria-label="Fechar">&times;</button>
+      <img id="lightbox-img" src="" alt="Tela Ampliada">
+      <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Feedback -->
+  <div class="toast-notification" id="toast">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--emerald-400)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+    <span id="toast-message">Mensagem enviada com sucesso!</span>
+  </div>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-logo">
+        <img src="assets/vitor_schuenquener.jpeg" alt="Vitor Schuenquener" class="nav-avatar" style="width: 28px; height: 28px;">
+        <span>Vitor Schuenquener</span>
+      </div>
+      <div class="footer-copy">
+        &copy; 2026 Vitor Schuenquener. Todos os direitos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/projects-data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
